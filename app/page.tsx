@@ -13,7 +13,7 @@ export default function Home() {
       Project coming soon. Stay tuned for updates!
     </p>
     <p className="mt-6 text-sm text-gray-500 dark:text-gray-500 text-center">
-      © 2023 Beaconfoldmedia. All rights reserved. Built by Wansom
+      © 2023 Beaconfoldmedia. All rights reserved. <a href="https://www.wansom.ai" className="text-blue-500 hover:underline">Built by Wansom</a>
     </p>
    </div>
    </div>
