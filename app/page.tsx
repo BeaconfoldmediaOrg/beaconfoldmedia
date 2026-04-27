@@ -9,10 +9,10 @@ export default function Home() {
      <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200">
       Welcome to Beaconfoldmedia!
     </h2>
-    <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+    <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 text-center">
       Project coming soon. Stay tuned for updates!
     </p>
-    <p className="mt-6 text-sm text-gray-500 dark:text-gray-500">
+    <p className="mt-6 text-sm text-gray-500 dark:text-gray-500 text-center">
       © 2023 Beaconfoldmedia. All rights reserved. Built by Wansom
     </p>
    </div>
