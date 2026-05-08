@@ -1,32 +1,142 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
-import { BookOpen, Globe, Lock, BarChart3 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
-const principles = [
+const works = [
   {
-    icon: BookOpen,
-    title: "Evidence-First",
-    description: "Every strategy grounded in rigorous research, data, and stakeholder insight before a single message is crafted.",
+    id: "01",
+    category: "Digital Campaign",
+    title: "Pan-African Youth Advocacy Campaign",
+    description: "A multi-platform mobilization campaign that engaged 2.4M+ young Africans on civic rights and democratic participation across 12 countries.",
+    client: "Regional CSO Network",
+    year: "2024",
+    featured: true,
+    image: "/works/strike.jpg",
   },
   {
-    icon: Globe,
-    title: "Pan-African Depth",
-    description: "Deep relationships across civil society, government, and media built over years of on-the-ground engagement.",
+    id: "02",
+    category: "Policy Communications",
+    title: "East Africa Health Policy Brief",
+    description: "Evidence-led policy briefs that influenced health financing decisions at the ministerial level in three East African nations.",
+    client: "Health Foundation",
+    year: "2024",
+    featured: false,
+    image: "/works/health.jpg",
   },
   {
-    icon: Lock,
-    title: "Client Confidentiality",
-    description: "Strict protocols to protect your strategy, sensitive information, and stakeholder relationships at all times.",
+    id: "03",
+    category: "Audiovisual Production",
+    title: "Powered Voice: Democracy Series",
+    description: "An 8-part podcast series documenting civic space challenges and victories, reaching 50,000+ listeners across the continent.",
+    client: "Pan-African Alliance",
+    year: "2023",
+    featured: false,
+    image: "/works/strike.jpg",
   },
   {
-    icon: BarChart3,
-    title: "Measurable Impact",
-    description: "Clear KPIs and evaluation frameworks ensure every engagement delivers documented, reportable outcomes.",
+    id: "04",
+    category: "Digital Strategy",
+    title: "West Africa CSO Digital Transformation",
+    description: "End-to-end digital strategy and capacity building for a coalition of 24 civil society organizations, tripling their online reach.",
+    client: "CSO Coalition",
+    year: "2023",
+    featured: true,
+    image: "/works/seminar.jpg",
   },
 ];
 
-const values = ["Integrity", "Leadership", "Collaboration", "Impact", "Creativity"];
+function WorkCard({
+  work,
+  index,
+  featured = false,
+}: {
+  work: (typeof works)[0];
+  index: number;
+  featured?: boolean;
+}) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { threshold: 0.1 }
+    );
+    if (cardRef.current) observer.observe(cardRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={cardRef}
+      className={`group flex flex-col h-full border border-foreground/20 overflow-hidden cursor-pointer transition-all duration-700 hover:border-foreground ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+      style={{ transitionDelay: `${index * 120}ms` }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Image */}
+      <div className="relative overflow-hidden bg-foreground/5 h-64 lg:h-72">
+        <img
+          src={work.image}
+          alt={work.title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        {/* Overlay */}
+        <div
+          className="absolute inset-0 transition-opacity duration-500"
+          style={{
+            background: "linear-gradient(to top, var(--foreground) 0%, transparent 60%)",
+            opacity: isHovered ? 0.6 : 0.3,
+          }}
+        />
+        {/* Category tag */}
+        <span
+          className="absolute top-4 left-4 text-xs font-mono px-3 py-1"
+          style={{ backgroundColor: "var(--gold)", color: "var(--foreground)" }}
+        >
+          {work.category}
+        </span>
+        {/* Arrow icon on hover */}
+        <div
+          className={`absolute top-4 right-4 w-8 h-8 flex items-center justify-center border border-background/40 text-background transition-all duration-300 ${
+            isHovered ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+          }`}
+        >
+          <ArrowUpRight className="w-4 h-4" />
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-col flex-1 p-6 lg:p-8 gap-3">
+        <div className="flex items-center justify-between">
+          <span className="font-mono text-xs text-muted-foreground">{work.client}</span>
+          <span className="font-mono text-xs text-muted-foreground">{work.year}</span>
+        </div>
+
+        <h3 className="font-display text-xl lg:text-2xl tracking-tight group-hover:translate-x-1 transition-transform duration-500 leading-snug">
+          {work.title}
+        </h3>
+
+        <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+          {work.description}
+        </p>
+
+        <div
+          className="mt-2 flex items-center gap-2 text-sm font-mono text-foreground/50 group-hover:text-foreground transition-colors duration-300"
+        >
+          View case study
+          <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function SecuritySection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,82 +147,62 @@ export function SecuritySection() {
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.1 }
+      { threshold: 0.05 }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section id="security" ref={sectionRef} className="relative py-24 lg:py-32 bg-foreground/[0.02] overflow-hidden">
+    <section id="security" ref={sectionRef} className="relative py-24 lg:py-32">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
-          {/* Left: Content */}
-          <div
-            className={`transition-all duration-700 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
+
+        {/* Header */}
+        <div
+          className={`flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16 lg:mb-20 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          <div>
             <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
               <span className="w-8 h-px" style={{ backgroundColor: "var(--gold)" }} />
-              Principles
+              Selected Work
             </span>
-            <h2 className="text-4xl lg:text-6xl font-display tracking-tight mb-8">
-              Integrity is
+            <h2 className="text-4xl lg:text-6xl font-display tracking-tight">
+              Work that drives
               <br />
-              non-negotiable.
+              <span className="text-muted-foreground">real change.</span>
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-12">
-              Every engagement begins and ends with our commitment to evidence-based,
-              ethical, and impactful work. Our values aren&apos;t aspirational —
-              they&apos;re operational.
-            </p>
-
-            {/* Values */}
-            <div className="flex flex-wrap gap-3">
-              {values.map((value, index) => (
-                <span
-                  key={value}
-                  className={`px-4 py-2 border text-sm font-mono transition-all duration-500 ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                  }`}
-                  style={{
-                    transitionDelay: `${index * 50 + 200}ms`,
-                    borderColor: "var(--gold)",
-                    color: "var(--gold)",
-                  }}
-                >
-                  {value}
-                </span>
-              ))}
-            </div>
           </div>
 
-          {/* Right: Principles */}
-          <div className="grid gap-6">
-            {principles.map((principle, index) => (
-              <div
-                key={principle.title}
-                className={`p-6 border border-foreground/10 hover:border-foreground/20 transition-all duration-500 group ${
-                  isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <div className="flex items-start gap-4">
-                  <div className="shrink-0 w-10 h-10 flex items-center justify-center border border-foreground/10 group-hover:border-[var(--gold)] transition-colors duration-300">
-                    <principle.icon className="w-5 h-5 group-hover:text-[var(--gold)] transition-colors duration-300" style={{ color: "inherit" }} />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium mb-1 group-hover:translate-x-1 transition-transform duration-300">
-                      {principle.title}
-                    </h3>
-                    <p className="text-muted-foreground">{principle.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <button
+            type="button"
+            className="inline-flex items-center gap-2 text-sm font-mono border border-foreground px-6 py-3 self-start lg:self-end hover:bg-foreground hover:text-background transition-all duration-300 group/all"
+          >
+            View all work
+            <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/all:translate-x-1" />
+          </button>
+        </div>
+
+        {/* Asymmetric grid */}
+        <div className="grid lg:grid-cols-3 gap-px bg-foreground/10">
+          {/* Row 1: featured (2 cols) + small (1 col) */}
+          <div className="lg:col-span-2 bg-background flex">
+            <WorkCard work={works[0]} index={0} featured />
+          </div>
+          <div className="bg-background flex">
+            <WorkCard work={works[1]} index={1} />
+          </div>
+
+          {/* Row 2: small (1 col) + featured (2 cols) */}
+          <div className="bg-background flex">
+            <WorkCard work={works[2]} index={2} />
+          </div>
+          <div className="lg:col-span-2 bg-background flex">
+            <WorkCard work={works[3]} index={3} featured />
           </div>
         </div>
+
       </div>
     </section>
   );

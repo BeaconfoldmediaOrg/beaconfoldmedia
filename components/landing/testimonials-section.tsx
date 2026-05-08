@@ -97,24 +97,45 @@ export function TestimonialsSection() {
             </div>
           </div>
 
-          {/* Metric Highlight */}
-          <div className="lg:col-span-4 flex flex-col justify-center">
-            <div
-              className={`p-8 border transition-all duration-300 ${
-                isAnimating ? "opacity-0 scale-95" : "opacity-100 scale-100"
-              }`}
-              style={{ borderColor: "var(--gold)" }}
-            >
-              <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase block mb-4">
-                Key Result
-              </span>
-              <p className="font-display text-3xl md:text-4xl text-foreground">
-                {activeTestimonial.metric}
-              </p>
+          {/* Right: person image background + Key Result foreground */}
+          <div className="lg:col-span-4 flex flex-col justify-center gap-6">
+            <div className="relative overflow-hidden aspect-[3/4]">
+              {/* Person image as background */}
+              <img
+                src="/works/digital.jpg"
+                alt={activeTestimonial.author}
+                className={`w-full h-full object-cover object-top transition-all duration-500 ${
+                  isAnimating ? "opacity-0 scale-105" : "opacity-100 scale-100"
+                }`}
+              />
+              {/* Dark gradient so the card reads clearly */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  background: "linear-gradient(to top, var(--foreground) 0%, transparent 55%)",
+                  opacity: 0.75,
+                }}
+              />
+
+              {/* Key Result card — pinned to the bottom of the image */}
+              <div
+                className={`absolute bottom-0 left-0 right-0 p-6 transition-all duration-300 ${
+                  isAnimating ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"
+                }`}
+              >
+                <span className="font-mono text-xs tracking-widest text-background/60 uppercase block mb-2">
+                  Key Result
+                </span>
+                <p className="font-display text-2xl md:text-3xl text-background leading-tight">
+                  {activeTestimonial.metric}
+                </p>
+                {/* Gold underline accent */}
+                <div className="mt-3 w-8 h-0.5" style={{ backgroundColor: "var(--gold)" }} />
+              </div>
             </div>
 
             {/* Navigation Dots */}
-            <div className="flex gap-2 mt-8">
+            <div className="flex gap-2">
               {testimonials.map((_, idx) => (
                 <button
                   key={idx}
