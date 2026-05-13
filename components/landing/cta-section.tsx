@@ -51,14 +51,15 @@ export function CtaSection() {
               {/* Left content */}
               <div className="flex-1">
                 <h2 className="text-4xl lg:text-7xl font-display tracking-tight mb-8 leading-[0.95]">
-                  Ready to amplify
+                  Let&apos;s Build Stories
                   <br />
-                  your advocacy?
+                  That Drive Change
                 </h2>
 
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
-                  Partner with BeaconFold Media to guide your voices for African change.
-                  From evidence to story to action — we&apos;re with you every step.
+                  Whether you are launching a campaign, shaping policy conversations,
+                  documenting impact, or building a movement — BeaconFold Media is ready
+                  to partner with you.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -79,9 +80,10 @@ export function CtaSection() {
                   </Button>
                 </div>
 
-                <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  Advocacy. Strategy. Impact.
-                </p>
+                <div className="mt-8 flex flex-col gap-1 font-mono text-sm text-muted-foreground">
+                  <span>beaconfoldmedia@gmail.com</span>
+                  <span>+254 790 546287</span>
+                </div>
               </div>
 
               {/* Right animation */}

@@ -59,8 +59,8 @@ export function FooterSection() {
               </a>
 
               <p className="text-muted-foreground leading-relaxed mb-8 max-w-xs">
-                Trusted strategic communications partner for development and advocacy in Africa.
-                Guiding voices for African change.
+                A Pan-African Public relations, strategic communications and advocacy agency
+                focused on evidence-based storytelling, policy influence, and development impact.
               </p>
 
               {/* Social Links */}
@@ -116,7 +116,7 @@ export function FooterSection() {
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-2 font-mono text-xs">
               <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "var(--teal)" }} />
-              Advocacy. Strategy. Impact.
+              Evidence. Story. Action.
             </span>
           </div>
         </div>

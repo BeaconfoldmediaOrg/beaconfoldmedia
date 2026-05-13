@@ -11,7 +11,7 @@ const navLinks = [
   { name: "Engagement", href: "#pricing" },
 ];
 
-export function Navigation() {
+export function Navigation({ variant = "dark" }: { variant?: "dark" | "light" }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -22,6 +22,10 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Use light (white) colours only when the nav is floating over a dark background
+  // i.e. variant="light", not yet scrolled (no frosted backdrop), and mobile menu is closed
+  const useLight = variant === "light" && !isScrolled && !isMobileMenuOpen;
 
   return (
     <header
@@ -43,9 +47,14 @@ export function Navigation() {
             isScrolled ? "h-14" : "h-20"
           }`}
         >
-          {/* Logo */}
+          {/* Logo — invert to white when floating over a dark background */}
           <a href="#" className="flex items-center gap-1 group">
-            <img src="/logo.png" alt="BeaconFold Media" />
+            <img
+              src="/logo.png"
+              alt="BeaconFold Media"
+              className="transition-all duration-500"
+              style={useLight ? { filter: "brightness(0) invert(1)" } : {}}
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -54,10 +63,18 @@ export function Navigation() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm text-foreground/70 hover:text-foreground transition-colors duration-300 relative group"
+                className={`text-sm transition-colors duration-300 relative group ${
+                  useLight
+                    ? "text-white/70 hover:text-white"
+                    : "text-foreground/70 hover:text-foreground"
+                }`}
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-foreground transition-all duration-300 group-hover:w-full" />
+                <span
+                  className={`absolute -bottom-1 left-0 w-0 h-px transition-all duration-300 group-hover:w-full ${
+                    useLight ? "bg-white" : "bg-foreground"
+                  }`}
+                />
               </a>
             ))}
           </div>
@@ -66,7 +83,19 @@ export function Navigation() {
           <div className="hidden md:flex items-center gap-4">
             <Button
               size="sm"
-              className={`bg-foreground hover:bg-foreground/90 text-background rounded-full transition-all duration-500 ${isScrolled ? "px-4 h-8 text-xs" : "px-6"}`}
+              className={`rounded-full transition-all duration-500 ${isScrolled ? "px-4 h-8 text-xs" : "px-6"}`}
+              style={
+                useLight
+                  ? {
+                      backgroundColor: "transparent",
+                      border: "1px solid rgba(255,255,255,0.4)",
+                      color: "white",
+                    }
+                  : {
+                      backgroundColor: "var(--foreground)",
+                      color: "var(--background)",
+                    }
+              }
             >
               Get in Touch
             </Button>
@@ -75,7 +104,7 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2"
+            className={`md:hidden p-2 transition-colors duration-300 ${useLight ? "text-white" : ""}`}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (

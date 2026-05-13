@@ -46,32 +46,33 @@ export function InfrastructureSection() {
           >
             <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
               <span className="w-8 h-px" style={{ backgroundColor: "var(--gold)" }} />
-              Reach
+              Who We Are
             </span>
             <h2 className="text-4xl lg:text-6xl font-display tracking-tight mb-8">
-              Pan-African
+              About BeaconFold
               <br />
-              by design.
+              Media.
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-12">
-              From Nairobi to Lagos to Johannesburg, BeaconFold Media is embedded
-              in the communities and policy corridors that shape Africa&apos;s future.
-              Our network spans 25+ countries across 6 regional blocs.
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              BeaconFold Media is a Pan-African communications and advocacy agency
+              dedicated to shaping impactful narratives for development, policy, and
+              social change.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-12">
+              Built on the pillars of <span className="text-foreground font-medium">Evidence. Story. Action.</span>, we help
+              organizations communicate with clarity, influence stakeholders strategically,
+              and inspire transformative action across Africa.
             </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8">
-              <div>
-                <div className="text-4xl lg:text-5xl font-display mb-2">25+</div>
-                <div className="text-sm text-muted-foreground">Countries</div>
+            {/* Vision & Mission */}
+            <div className="grid grid-cols-1 gap-6">
+              <div className="border-l-2 pl-4" style={{ borderColor: "var(--gold)" }}>
+                <div className="text-xs font-mono text-muted-foreground mb-1">Vision</div>
+                <div className="text-sm leading-relaxed">A Pan-African ecosystem where evidence, storytelling, and strategy drive policy and social change.</div>
               </div>
-              <div>
-                <div className="text-4xl lg:text-5xl font-display mb-2">50+</div>
-                <div className="text-sm text-muted-foreground">Campaigns delivered</div>
-              </div>
-              <div>
-                <div className="text-4xl lg:text-5xl font-display mb-2">6</div>
-                <div className="text-sm text-muted-foreground">Regional blocs</div>
+              <div className="border-l-2 pl-4" style={{ borderColor: "var(--gold)" }}>
+                <div className="text-xs font-mono text-muted-foreground mb-1">Mission</div>
+                <div className="text-sm leading-relaxed">To deliver high-impact advocacy, strategic communications, digital campaigns, audiovisual content, and events that amplify civic and development outcomes across Africa.</div>
               </div>
             </div>
           </div>

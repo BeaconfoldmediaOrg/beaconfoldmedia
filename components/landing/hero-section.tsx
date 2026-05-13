@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { AnimatedSphere } from "./animated-sphere";
 
-const words = ["guide", "advocate", "influence", "amplify"];
+const words = ["voices", "communities", "stories", "movements"];
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -64,7 +64,7 @@ export function HeroSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground">
             <span className="w-8 h-px bg-[var(--gold)]" />
-            Pan-African advocacy & strategic communications
+            A Pan-African public relations and strategic communications agency
           </span>
         </div>
 
@@ -75,9 +75,8 @@ export function HeroSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="block">The partner</span>
+            <span className="block">Guiding African</span>
             <span className="block">
-              to{" "}
               <span className="relative inline-block">
                 <span
                   key={wordIndex}
@@ -98,7 +97,7 @@ export function HeroSection() {
                 <span className="absolute -bottom-2 left-0 right-0 h-3" style={{ backgroundColor: 'var(--gold)', opacity: 0.25 }} />
               </span>
             </span>
-            <span className="block">African voices</span>
+            <span className="block">for Change</span>
           </h1>
         </div>
 
@@ -109,9 +108,8 @@ export function HeroSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            From evidence to story to action. We deliver strategic communications,
-            digital campaigns, and advocacy that drives policy and social change
-            across Africa.
+            Strategic communications, advocacy, and storytelling that transform
+            evidence into action across Africa.
           </p>
 
           {/* CTAs */}
@@ -125,7 +123,7 @@ export function HeroSection() {
               className="text-background px-8 h-14 text-base rounded-full group"
               style={{ backgroundColor: 'var(--gold)', color: 'var(--foreground)' }}
             >
-              Work With Us
+              Our Work
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button
@@ -133,7 +131,7 @@ export function HeroSection() {
               variant="outline"
               className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
             >
-              Explore Our Work
+              Get In Touch
             </Button>
           </div>
         </div>

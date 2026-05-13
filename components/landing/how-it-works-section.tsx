@@ -28,6 +28,18 @@ const services = [
     description: "Cinematic storytelling and podcast production that amplifies your mission. Powered Voice brings African advocacy voices to global audiences through compelling audio and visual content.",
     cta: "Visit Powered Voice",
   },
+  {
+    number: "05",
+    title: "Event Communication",
+    description: "Strategic visibility and engagement for conferences, forums, and convenings.",
+    cta: "Learn More",
+  },
+  {
+    number: "06",
+    title: "Research & Impact Storytelling",
+    description: "Turning evidence, insights, and data into compelling narratives.",
+    cta: "Learn More",
+  },
 ];
 
 function ServiceCard({ service, index }: { service: (typeof services)[0]; index: number }) {
@@ -103,7 +115,7 @@ export function HowItWorksSection() {
         <div className="mb-16 lg:mb-24">
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px" style={{ backgroundColor: "var(--gold)" }} />
-            Services
+            Our Services
           </span>
           <h2
             className={`text-4xl lg:text-6xl font-display tracking-tight transition-all duration-700 ${
@@ -117,10 +129,25 @@ export function HowItWorksSection() {
         </div>
 
         {/* Cards grid — items-stretch ensures equal height */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0 items-stretch">
           {services.map((service, index) => (
             <ServiceCard key={service.number} service={service} index={index} />
           ))}
+        </div>
+
+        {/* Impact & Closing statements */}
+        <div className="mt-16 lg:mt-24 grid lg:grid-cols-2 gap-12 lg:gap-24 border-t border-foreground/10 pt-12">
+          <div>
+            <span className="text-xs font-mono text-muted-foreground block mb-3">Impact Statement</span>
+            <p className="text-xl lg:text-2xl font-display tracking-tight leading-snug">
+              Every campaign, story, and strategy we create is designed to move audiences from awareness to action.
+            </p>
+          </div>
+          <div className="flex items-end">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              We believe Africa&apos;s stories deserve strategic visibility, authentic representation, and measurable impact.
+            </p>
+          </div>
         </div>
       </div>
     </section>

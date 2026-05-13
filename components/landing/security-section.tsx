@@ -166,13 +166,16 @@ export function SecuritySection() {
           <div>
             <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
               <span className="w-8 h-px" style={{ backgroundColor: "var(--gold)" }} />
-              Selected Work
+              Our Work
             </span>
             <h2 className="text-4xl lg:text-6xl font-display tracking-tight">
-              Work that drives
+              Strategic Communication
               <br />
-              <span className="text-muted-foreground">real change.</span>
+              <span className="text-muted-foreground">for Impact.</span>
             </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mt-4 max-w-xl">
+              We help organizations tell stories that influence policy, inspire communities, and strengthen development outcomes.
+            </p>
           </div>
 
           <button
