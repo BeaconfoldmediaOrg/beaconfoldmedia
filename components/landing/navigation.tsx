@@ -50,9 +50,9 @@ export function Navigation({ variant = "dark" }: { variant?: "dark" | "light" })
           {/* Logo — invert to white when floating over a dark background */}
           <a href="#" className="flex items-center gap-1 group">
             <img
-              src="/logo.png"
+              src="/logo-2.png"
               alt="BeaconFold Media"
-              className="transition-all duration-500"
+              className="transition-all duration-500 h-28 w-auto"
               style={useLight ? { filter: "brightness(0) invert(1)" } : {}}
             />
           </a>

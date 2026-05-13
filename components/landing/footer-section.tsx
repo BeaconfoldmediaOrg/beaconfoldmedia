@@ -54,8 +54,11 @@ export function FooterSection() {
             {/* Brand Column */}
             <div className="col-span-2">
               <a href="#" className="inline-flex items-center gap-1 mb-6">
-                <span className="text-2xl font-display">BeaconFold</span>
-                <span className="text-2xl font-display" style={{ color: "var(--gold)" }}>Media</span>
+                <img
+              src="/logo-2.png"
+              alt="BeaconFold Media"
+              className="transition-all duration-500 h-28 w-auto"
+            />
               </a>
 
               <p className="text-muted-foreground leading-relaxed mb-8 max-w-xs">
