@@ -67,7 +67,7 @@ export default function ContactPage() {
       <Navigation />
 
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="relative pt-40 pb-20 lg:pb-28 overflow-hidden">
+      <section className="relative pt-40 pb-20 lg:pb-5 overflow-hidden">
         {/* Subtle grid lines */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
           {[...Array(6)].map((_, i) => (
@@ -103,7 +103,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── Main Content ─────────────────────────────────────── */}
-      <section className="py-12 border-t border-foreground/10">
+      <section className="pb-12 py-5 border-t border-foreground/10">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 grid lg:grid-cols-[1fr_400px] gap-16 lg:gap-24">
 
           {/* ── Form ── */}
