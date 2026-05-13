@@ -50,8 +50,7 @@ export function InfrastructureSection() {
             </span> */}
             <h2 className="text-4xl lg:text-6xl font-display tracking-tight mb-8">
              Who We Are
-              <br />
-              Media.
+             
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               BeaconFold Media is a Pan-African communications and advocacy agency
