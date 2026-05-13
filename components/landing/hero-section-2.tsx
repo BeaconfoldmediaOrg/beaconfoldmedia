@@ -6,19 +6,19 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    image: "/works/strike.jpg",
+    image: "/brand/group-1.jpg",
     caption: "Pan-African Youth Advocacy",
   },
   {
-    image: "/works/health.jpg",
+    image: "/brand/group-2.jpg",
     caption: "Health Policy Communications",
   },
   {
-    image: "/works/seminar.jpg",
+    image: "/brand/group-3.jpg",
     caption: "Strategic Convenings",
   },
   {
-    image: "/works/digital.jpg",
+    image: "/brand/group-4.jpg",
     caption: "Digital Strategy & Campaigns",
   },
 ];
