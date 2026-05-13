@@ -142,7 +142,7 @@ export function FeaturesSection() {
         <div className="mb-16 lg:mb-24">
           <span className="inline-flex items-center gap-3 text-sm font-mono text-background/100 mb-6">
             <span className="w-8 h-px bg-background/80" />
-            Process
+          Our Process
           </span>
           <h2
             className={`text-4xl lg:text-6xl font-display tracking-tight text-background transition-all duration-700 ${
