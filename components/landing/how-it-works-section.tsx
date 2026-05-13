@@ -12,41 +12,42 @@ const services = [
     description: "Evidence-based communications strategy that guides your voice from insight to impact. We help you say the right thing, to the right people, at the right time — in every room that matters.",
     cta: "Learn More",
   },
-  {
-    slug: "advocacy-policy",
-    number: "02",
-    title: "Advocacy & Policy Communications",
-    description: "From policy briefs to parliamentary submissions, we build the narrative infrastructure that shifts policy. Pan-African expertise, globally credible, culturally resonant.",
-    cta: "Learn More",
-  },
-  {
+    {
     slug: "digital-strategy",
-    number: "03",
+    number: "02",
     title: "Digital Strategy & Campaigns",
     description: "Multi-channel campaigns designed to mobilize, engage, and convert audiences. Data-driven strategy meets compelling storytelling for measurable reach and impact.",
     cta: "Learn More",
   },
-  {
+   {
     slug: "audiovisual-production",
-    number: "04",
+    number: "03",
     title: "Audiovisual Production & Podcasting",
     description: "Cinematic storytelling and podcast production that amplifies your mission. Powered Voice brings African advocacy voices to global audiences through compelling audio and visual content.",
     cta: "Learn More",
   },
-  {
+    {
     slug: "event-communication",
-    number: "05",
+    number: "04",
     title: "Event Communication",
     description: "Strategic visibility and engagement for conferences, forums, and convenings.",
     cta: "Learn More",
   },
   {
-    slug: "research-impact-storytelling",
-    number: "06",
-    title: "Research & Impact Storytelling",
-    description: "Turning evidence, insights, and data into compelling narratives.",
+    slug: "advocacy-policy",
+    number: "05",
+    title: "Advocacy & Policy Communications",
+    description: "From policy briefs to parliamentary submissions, we build the narrative infrastructure that shifts policy. Pan-African expertise, globally credible, culturally resonant.",
     cta: "Learn More",
   },
+
+    {
+      slug: "research-impact-storytelling",
+      number: "06",
+      title: "Research & Impact Storytelling",
+      description: "Turning evidence, insights, and data into compelling narratives.",
+      cta: "Learn More",
+    },
 ];
 
 function ServiceCard({ service, index }: { service: (typeof services)[0]; index: number }) {
