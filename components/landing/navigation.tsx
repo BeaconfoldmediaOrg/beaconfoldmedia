@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Services", href: "/#how-it-works" },
+  { name: "Home", href: "/#home" },
+  { name: "Who we are ", href: "/#about" },
+  { name: "Our Services", href: "/#how-it-works" },
   { name: "Our Work", href: "/#security" },
-  { name: "Powered Voice", href: "#developers" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export function Navigation({ variant = "dark" }: { variant?: "dark" | "light" }) {
