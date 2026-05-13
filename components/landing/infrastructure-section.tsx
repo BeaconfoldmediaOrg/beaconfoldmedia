@@ -44,15 +44,15 @@ export function InfrastructureSection() {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
+            {/* <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
               <span className="w-8 h-px" style={{ backgroundColor: "var(--gold)" }} />
               Who We Are
-            </span>
-            {/* <h2 className="text-4xl lg:text-6xl font-display tracking-tight mb-8">
-              About BeaconFold
+            </span> */}
+            <h2 className="text-4xl lg:text-6xl font-display tracking-tight mb-8">
+             Who We Are
               <br />
               Media.
-            </h2> */}
+            </h2>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               BeaconFold Media is a Pan-African communications and advocacy agency
               dedicated to shaping impactful narratives for development, policy, and

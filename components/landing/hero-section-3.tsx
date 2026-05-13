@@ -12,7 +12,7 @@ export function HeroSection3() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden" id="home">
       {/* Video background — place your file at public/hero-video.mp4 */}
       <video
         autoPlay
