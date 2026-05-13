@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Services", href: "#features" },
-  { name: "How We Work", href: "#how-it-works" },
+  { name: "Services", href: "/#how-it-works" },
+  { name: "Our Work", href: "/#security" },
   { name: "Powered Voice", href: "#developers" },
-  { name: "Engagement", href: "#pricing" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function Navigation({ variant = "dark" }: { variant?: "dark" | "light" }) {
@@ -81,24 +81,26 @@ export function Navigation({ variant = "dark" }: { variant?: "dark" | "light" })
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button
-              size="sm"
-              className={`rounded-full transition-all duration-500 ${isScrolled ? "px-4 h-8 text-xs" : "px-6"}`}
-              style={
-                useLight
-                  ? {
-                      backgroundColor: "transparent",
-                      border: "1px solid rgba(255,255,255,0.4)",
-                      color: "white",
-                    }
-                  : {
-                      backgroundColor: "var(--foreground)",
-                      color: "var(--background)",
-                    }
-              }
-            >
-              Get in Touch
-            </Button>
+            <a href="/contact">
+              <Button
+                size="sm"
+                className={`rounded-full transition-all duration-500 ${isScrolled ? "px-4 h-8 text-xs" : "px-6"}`}
+                style={
+                  useLight
+                    ? {
+                        backgroundColor: "transparent",
+                        border: "1px solid rgba(255,255,255,0.4)",
+                        color: "white",
+                      }
+                    : {
+                        backgroundColor: "var(--foreground)",
+                        color: "var(--background)",
+                      }
+                }
+              >
+                Get in Touch
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
