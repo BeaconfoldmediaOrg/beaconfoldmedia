@@ -94,16 +94,16 @@ export default function ContactPage() {
               <br />
               <span className="text-muted-foreground">That Drive Change</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
+            {/* <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
               Whether you are launching a campaign, shaping policy conversations, documenting
               impact, or building a movement — BeaconFold Media is ready to partner with you.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
 
       {/* ── Main Content ─────────────────────────────────────── */}
-      <section className="py-12 lg:py-20 border-t border-foreground/10">
+      <section className="py-12 border-t border-foreground/10">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 grid lg:grid-cols-[1fr_400px] gap-16 lg:gap-24">
 
           {/* ── Form ── */}
@@ -312,7 +312,7 @@ export default function ContactPage() {
                       <MapPin className="w-4 h-4" />
                     </span>
                     <div>
-                      <div className="text-xs font-mono text-muted-foreground mb-1">Base</div>
+                      <div className="text-xs font-mono text-muted-foreground mb-1">KEYSTONE PARK</div>
                       <div className="text-sm text-muted-foreground">
                         Nairobi, Kenya
                         <span className="block text-xs mt-0.5">Pan-African Operations</span>
