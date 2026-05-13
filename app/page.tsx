@@ -19,8 +19,9 @@ export default function Home() {
       <Navigation variant="light"/>
       <HeroSection3 />
       <InfrastructureSection />
+        <FeaturesSection />
       <HowItWorksSection />
-      <FeaturesSection />
+    
        <SecuritySection />
             <TestimonialsSection />
       <BlogsSection />

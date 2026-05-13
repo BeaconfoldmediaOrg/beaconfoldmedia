@@ -36,7 +36,7 @@ const services = [
   {
     slug: "advocacy-policy",
     number: "05",
-    title: "Advocacy & Policy Communications",
+    title: "Policy Advocacy & Communications",
     description: "From policy briefs to parliamentary submissions, we build the narrative infrastructure that shifts policy. Pan-African expertise, globally credible, culturally resonant.",
     cta: "Learn More",
   },
