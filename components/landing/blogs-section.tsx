@@ -123,7 +123,7 @@ export function BlogsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-24 lg:py-32 border-t border-foreground/10">
+    <section ref={sectionRef} className="relative py-24 lg:py-32 border-t border-foreground/10" id="resources">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
 
         {/* Header */}
