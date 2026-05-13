@@ -1,40 +1,47 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 
 const services = [
   {
+    slug: "strategic-communications",
     number: "01",
     title: "Strategic Communications & Counsel",
     description: "Evidence-based communications strategy that guides your voice from insight to impact. We help you say the right thing, to the right people, at the right time — in every room that matters.",
     cta: "Request a Consult",
   },
   {
+    slug: "advocacy-policy",
     number: "02",
     title: "Advocacy & Policy Communications",
     description: "From policy briefs to parliamentary submissions, we build the narrative infrastructure that shifts policy. Pan-African expertise, globally credible, culturally resonant.",
     cta: "Start a Campaign",
   },
   {
+    slug: "digital-strategy",
     number: "03",
     title: "Digital Strategy & Campaigns",
     description: "Multi-channel campaigns designed to mobilize, engage, and convert audiences. Data-driven strategy meets compelling storytelling for measurable reach and impact.",
     cta: "Explore Digital",
   },
   {
+    slug: "audiovisual-production",
     number: "04",
     title: "Audiovisual Production & Podcasting",
     description: "Cinematic storytelling and podcast production that amplifies your mission. Powered Voice brings African advocacy voices to global audiences through compelling audio and visual content.",
     cta: "Visit Powered Voice",
   },
   {
+    slug: "event-communication",
     number: "05",
     title: "Event Communication",
     description: "Strategic visibility and engagement for conferences, forums, and convenings.",
     cta: "Learn More",
   },
   {
+    slug: "research-impact-storytelling",
     number: "06",
     title: "Research & Impact Storytelling",
     description: "Turning evidence, insights, and data into compelling narratives.",
@@ -60,35 +67,37 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
   return (
     <div
       ref={cardRef}
-      className={`group border border-foreground p-8 lg:p-10 flex flex-col gap-6 h-full hover:bg-foreground/[0.02] transition-all duration-500 ${
+      className={`transition-all duration-500 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      {/* Number */}
-      <span className="font-mono text-xs text-muted-foreground">{service.number}</span>
-
-      {/* Title */}
-      <h3 className="text-2xl lg:text-3xl font-display tracking-tight group-hover:translate-x-1 transition-transform duration-500">
-        {service.title}
-      </h3>
-
-      {/* Divider */}
-      <div className="w-8 h-px" style={{ backgroundColor: "var(--gold)" }} />
-
-      {/* Description — flex-1 pushes CTA to the bottom */}
-      <p className="text-muted-foreground leading-relaxed flex-1">
-        {service.description}
-      </p>
-
-      {/* CTA */}
-      <button
-        type="button"
-        className="mt-2 inline-flex items-center gap-2 text-sm font-mono border border-foreground px-4 py-2 self-start hover:bg-foreground hover:text-background transition-all duration-300 group/btn"
+      <Link
+        href={`/services/${service.slug}`}
+        className="group border border-foreground p-8 lg:p-10 flex flex-col gap-6 h-full hover:bg-foreground/[0.02] transition-colors duration-500"
       >
-        {service.cta}
-        <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" />
-      </button>
+        {/* Number */}
+        <span className="font-mono text-xs text-muted-foreground">{service.number}</span>
+
+        {/* Title */}
+        <h3 className="text-2xl lg:text-3xl font-display tracking-tight group-hover:translate-x-1 transition-transform duration-500">
+          {service.title}
+        </h3>
+
+        {/* Divider */}
+        <div className="w-8 h-px" style={{ backgroundColor: "var(--gold)" }} />
+
+        {/* Description — flex-1 pushes CTA to the bottom */}
+        <p className="text-muted-foreground leading-relaxed flex-1">
+          {service.description}
+        </p>
+
+        {/* CTA */}
+        <span className="mt-2 inline-flex items-center gap-2 text-sm font-mono border border-foreground px-4 py-2 self-start transition-all duration-300 group-hover:bg-foreground group-hover:text-background">
+          {service.cta}
+          <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+        </span>
+      </Link>
     </div>
   );
 }

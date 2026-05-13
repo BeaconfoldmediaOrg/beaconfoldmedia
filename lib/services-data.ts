@@ -19,7 +19,7 @@ export const servicesData: Service[] = [
     tagline: "Say the right thing, to the right people, at the right time.",
     description:
       "Evidence-based communications strategy that guides your voice from insight to impact. We help organisations navigate complex stakeholder landscapes, craft messages that resonate, and build the communications infrastructure needed for lasting influence.",
-    image: "/works/seminar.jpg",
+    image: "/works/1.jpg",
     offerings: [
       {
         title: "Communications Strategy & Planning",
@@ -84,7 +84,7 @@ export const servicesData: Service[] = [
     tagline: "Building the narrative infrastructure that shifts policy.",
     description:
       "From policy briefs to parliamentary submissions, we build the communications and advocacy infrastructure that influences decisions where they are made. Pan-African expertise, globally credible, culturally resonant — designed to move legislation, shift budgets, and transform governance.",
-    image: "/works/health.jpg",
+    image: "/brand/group-3.jpg",
     offerings: [
       {
         title: "Policy Briefs & Position Papers",
@@ -149,7 +149,7 @@ export const servicesData: Service[] = [
     tagline: "Multi-channel campaigns designed to mobilise, engage, and convert.",
     description:
       "Data-driven digital strategy meets compelling storytelling — designed to build movements, shift opinions, and drive measurable action across social media, web, and emerging digital platforms. We bring a distinctly African lens to digital organising and online advocacy.",
-    image: "/works/digital.jpg",
+    image: "/works/3.jpg",
     offerings: [
       {
         title: "Digital Strategy & Audit",
@@ -214,7 +214,7 @@ export const servicesData: Service[] = [
     tagline: "Cinematic storytelling that amplifies your mission.",
     description:
       "Powered Voice — BeaconFold Media's audiovisual production arm — brings African advocacy voices to global audiences through compelling documentary, podcast, and video content. We believe the most powerful evidence is a story told well.",
-    image: "/works/strike.jpg",
+    image: "/works/2.jpg",
     offerings: [
       {
         title: "Documentary & Short Film Production",

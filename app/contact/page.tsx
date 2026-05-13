@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,13 +8,13 @@ import { Navigation } from "@/components/landing/navigation";
 import { FooterSection } from "@/components/landing/footer-section";
 
 const serviceOptions = [
-  "Strategic Communications & Counsel",
-  "Advocacy & Policy Communications",
-  "Digital Strategy & Campaigns",
-  "Audiovisual Production & Podcasting",
-  "Event Communication",
-  "Research & Impact Storytelling",
-  "Other / Not sure yet",
+  { label: "Strategic Communications & Counsel", slug: "strategic-communications" },
+  { label: "Advocacy & Policy Communications", slug: "advocacy-policy" },
+  { label: "Digital Strategy & Campaigns", slug: "digital-strategy" },
+  { label: "Audiovisual Production & Podcasting", slug: "audiovisual-production" },
+  { label: "Event Communication", slug: "event-communication" },
+  { label: "Research & Impact Storytelling", slug: "research-impact-storytelling" },
+  { label: "Other / Not sure yet", slug: undefined },
 ];
 
 function useFadeIn() {
@@ -112,6 +113,15 @@ export default function ContactPage() {
               formSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
+            {/* Image */}
+            <div className="w-full h-72 lg:h-96 overflow-hidden mb-10">
+              <img
+                src="/brand/clip.jpg"
+                alt="BeaconFold Media team"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
             <h2 className="text-2xl font-display tracking-tight mb-10">
               Start a Conversation
             </h2>
@@ -213,7 +223,7 @@ export default function ContactPage() {
                   >
                     <option value="" disabled>Select a service...</option>
                     {serviceOptions.map((opt) => (
-                      <option key={opt} value={opt}>{opt}</option>
+                      <option key={opt.label} value={opt.label}>{opt.label}</option>
                     ))}
                   </select>
                 </div>
@@ -335,18 +345,18 @@ export default function ContactPage() {
                   Our Services
                 </div>
                 <div className="flex flex-col gap-3">
-                  {serviceOptions.slice(0, 6).map((s) => (
-                    <a
-                      key={s}
-                      href={`/services/${s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}
+                  {serviceOptions.slice(0, 6).map((opt) => (
+                    <Link
+                      key={opt.label}
+                      href={`/services/${opt.slug}`}
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 flex items-center gap-2 group"
                     >
                       <span
                         className="w-4 h-px transition-all duration-300 group-hover:w-6"
                         style={{ backgroundColor: "var(--gold)" }}
                       />
-                      {s}
-                    </a>
+                      {opt.label}
+                    </Link>
                   ))}
                 </div>
               </div>

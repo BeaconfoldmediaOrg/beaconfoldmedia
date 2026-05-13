@@ -12,7 +12,7 @@ const works = [
     client: "Regional CSO Network",
     year: "2024",
     featured: true,
-    image: "/works/strike.jpg",
+    image: "/brand/group-3.jpg",
   },
   {
     id: "02",
@@ -22,7 +22,7 @@ const works = [
     client: "Health Foundation",
     year: "2024",
     featured: false,
-    image: "/works/health.jpg",
+    image: "/works/1.jpg",
   },
   {
     id: "03",
@@ -32,7 +32,7 @@ const works = [
     client: "Pan-African Alliance",
     year: "2023",
     featured: false,
-    image: "/works/strike.jpg",
+    image: "/works/3.jpg",
   },
   {
     id: "04",
@@ -42,7 +42,7 @@ const works = [
     client: "CSO Coalition",
     year: "2023",
     featured: true,
-    image: "/works/seminar.jpg",
+    image: "/works/2.jpg",
   },
 ];
 
