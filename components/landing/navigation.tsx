@@ -9,6 +9,7 @@ const navLinks = [
   { name: "Who we are ", href: "/#about" },
   { name: "Our Services", href: "/#how-it-works" },
   { name: "Our Work", href: "/#security" },
+  { name: "Resources", href: "/#resources" },
 ];
 
 export function Navigation({ variant = "dark" }: { variant?: "dark" | "light" }) {
