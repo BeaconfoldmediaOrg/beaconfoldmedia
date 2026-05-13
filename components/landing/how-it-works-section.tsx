@@ -22,7 +22,7 @@ const services = [
    {
     slug: "audiovisual-production",
     number: "03",
-    title: "Audiovisual Production & Podcasting",
+    title: "Audiovisual Production",
     description: "Cinematic storytelling and podcast production that amplifies your mission. Powered Voice brings African advocacy voices to global audiences through compelling audio and visual content.",
     cta: "Learn More",
   },
