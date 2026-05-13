@@ -342,22 +342,70 @@ export default function ContactPage() {
               {/* Services quick links */}
               <div>
                 <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider mb-4">
-                  Our Services
+                 Why BeaconFold
                 </div>
                 <div className="flex flex-col gap-3">
-                  {serviceOptions.slice(0, 6).map((opt) => (
-                    <Link
-                      key={opt.label}
-                      href={`/services/${opt.slug}`}
+                  
+                    <div
+                     
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 flex items-center gap-2 group"
                     >
                       <span
                         className="w-4 h-px transition-all duration-300 group-hover:w-6"
                         style={{ backgroundColor: "var(--gold)" }}
                       />
-                      {opt.label}
-                    </Link>
-                  ))}
+                     Pan-African perspective
+                    </div>
+                 <div
+                     
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 flex items-center gap-2 group"
+                    >
+                      <span
+                        className="w-4 h-px transition-all duration-300 group-hover:w-6"
+                        style={{ backgroundColor: "var(--gold)" }}
+                      />
+                    Advocacy-driven communication
+                    </div>
+                    <div
+                     
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 flex items-center gap-2 group"
+                    >
+                      <span
+                        className="w-4 h-px transition-all duration-300 group-hover:w-6"
+                        style={{ backgroundColor: "var(--gold)" }}
+                      />
+                    Strong storytelling expertise
+                    </div>
+                    <div
+                     
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 flex items-center gap-2 group"
+                    >
+                      <span
+                        className="w-4 h-px transition-all duration-300 group-hover:w-6"
+                        style={{ backgroundColor: "var(--gold)" }}
+                      />
+                   Development communication focus
+                    </div>
+                    <div
+                     
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 flex items-center gap-2 group"
+                    >
+                      <span
+                        className="w-4 h-px transition-all duration-300 group-hover:w-6"
+                        style={{ backgroundColor: "var(--gold)" }}
+                      />
+                    Strategic and creative execution
+                    </div>
+                     <div
+                     
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 flex items-center gap-2 group"
+                    >
+                      <span
+                        className="w-4 h-px transition-all duration-300 group-hover:w-6"
+                        style={{ backgroundColor: "var(--gold)" }}
+                      />
+                    Impact-oriented approach
+                    </div>
                 </div>
               </div>
             </div>
