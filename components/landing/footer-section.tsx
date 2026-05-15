@@ -40,36 +40,24 @@ export function FooterSection() {
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Main Footer */}
-        <div className="py-16 lg:py-24">
+        <div className="pt-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-8">
             {/* Brand Column */}
             <div className="col-span-2">
-              <a href="#" className="inline-flex items-center gap-1 mb-6">
+              <a href="/" className="inline-flex items-center gap-1">
                 <img
               src="/logo-2.png"
               alt="BeaconFold Media"
-              className="transition-all duration-500 h-28 w-auto"
+              className="transition-all duration-500 h-36 w-auto"
             />
               </a>
 
               <p className="text-muted-foreground leading-relaxed mb-8 max-w-xs">
-                A Pan-African Public relations, strategic communications and advocacy agency
+                A Pan-African Public relations and  strategic communications agency
                 focused on evidence-based storytelling, policy influence, and development impact.
               </p>
 
-              {/* Social Links */}
-              <div className="flex flex-wrap gap-6">
-                {socialLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 group"
-                  >
-                    {link.name}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                  </a>
-                ))}
-              </div>
+           
             </div>
 
             {/* Link Columns */}
@@ -100,6 +88,19 @@ export function FooterSection() {
             ))}
           </div>
         </div>
+           {/* Social Links */}
+              <div className="flex justify-center py-4 flex-wrap gap-6">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 group"
+                  >
+                    {link.name}
+                    <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                  </a>
+                ))}
+              </div>
 
         {/* Bottom Bar */}
         <div className="py-8 border-t border-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -115,6 +116,7 @@ export function FooterSection() {
           </div>
         </div>
       </div>
+
     </footer>
   );
 }

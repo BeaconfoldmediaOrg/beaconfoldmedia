@@ -24,7 +24,7 @@ export default function Home() {
     
        <SecuritySection />
             <TestimonialsSection />
-      <BlogsSection />
+      {/* <BlogsSection /> */}
       {/* <MetricsSection /> */}
       {/* <IntegrationsSection /> */}
 {/*  
