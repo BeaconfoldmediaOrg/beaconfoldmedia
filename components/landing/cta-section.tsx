@@ -51,9 +51,7 @@ export function CtaSection() {
               {/* Left content */}
               <div className="flex-1">
                 <h2 className="text-4xl lg:text-7xl font-display tracking-tight mb-8 leading-[0.95]">
-                  Let&apos;s Build Stories
-                  <br />
-                  That Drive Change
+                 Let’s Bring Your Vision to Life
                 </h2>
 
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
@@ -63,6 +61,7 @@ export function CtaSection() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
+                  <a href="/contact">
                   <Button
                     size="lg"
                     className="px-8 h-14 text-base rounded-full group"
@@ -71,13 +70,7 @@ export function CtaSection() {
                     Start a Conversation
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
-                  >
-                    Explore Our Work
-                  </Button>
+                  </a>
                 </div>
 
                 <div className="mt-8 flex flex-col gap-1 font-mono text-sm text-muted-foreground">
