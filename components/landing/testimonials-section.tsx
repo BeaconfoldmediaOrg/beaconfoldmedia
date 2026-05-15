@@ -41,6 +41,7 @@ const partners = [
   { src: "/partners/4.png", alt: "Partner logo 4", width: 1795, height: 470 },
   { src: "/partners/5.png", alt: "Partner logo 5", width: 351, height: 144 },
   { src: "/partners/6.jpg", alt: "Partner logo 6", width: 1200, height: 630 },
+   { src: "/partners/6.png", alt: "Partner logo 6", width: 1200, height: 630 },
 ];
 
 export function TestimonialsSection() {

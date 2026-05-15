@@ -71,7 +71,7 @@ export function ServicePageContent({ service }: { service: Service }) {
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            <span className="font-mono text-sm text-white/30 block mb-4">{service.number}</span>
+            {/* <span className="font-mono text-sm text-white/30 block mb-4">{service.number}</span> */}
             <h1 className="text-[clamp(2.5rem,7vw,5rem)] font-display leading-[0.95] tracking-tight text-white mb-6">
               {service.title}
             </h1>
