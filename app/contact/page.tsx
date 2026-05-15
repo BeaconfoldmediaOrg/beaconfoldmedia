@@ -11,7 +11,7 @@ const serviceOptions = [
   { label: "Strategic Communications & Counsel", slug: "strategic-communications" },
   { label: "Advocacy & Policy Communications", slug: "advocacy-policy" },
   { label: "Digital Strategy & Campaigns", slug: "digital-strategy" },
-  { label: "Audiovisual Production & Podcasting", slug: "audiovisual-production" },
+  { label: "Audiovisual Production", slug: "audiovisual-production" },
   { label: "Event Communication", slug: "event-communication" },
   { label: "Research & Impact Storytelling", slug: "research-impact-storytelling" },
   { label: "Other / Not sure yet", slug: undefined },

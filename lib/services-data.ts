@@ -210,19 +210,19 @@ export const servicesData: Service[] = [
   {
     slug: "audiovisual-production",
     number: "04",
-    title: "Audiovisual Production & Podcasting",
+    title: "Audiovisual Production",
     tagline: "Cinematic storytelling that amplifies your mission.",
     description:
-      "Powered Voice — BeaconFold Media's audiovisual production arm — brings African advocacy voices to global audiences through compelling documentary, podcast, and video content. We believe the most powerful evidence is a story told well.",
-    image: "/works/2.jpg",
+      "BeaconFold Media's audiovisual production arm — brings African advocacy voices to global audiences through compelling documentary, podcast, and video content. We believe the most powerful evidence is a story told well.",
+    image: "/brand/film-slate.png",
     offerings: [
       {
-        title: "Documentary & Short Film Production",
+        title: "Documentary & Short Film",
         description:
           "Research-grounded documentaries and impact films that humanise data, contextualise policy, and move audiences from awareness to empathy to action.",
       },
       {
-        title: "Podcast Development & Production (Powered Voice)",
+        title: "Podcast Development & Production",
         description:
           "End-to-end podcast production — concept development, guest curation, recording, editing, and distribution — for advocacy, development, and thought leadership voices.",
       },
