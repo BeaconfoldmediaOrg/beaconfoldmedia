@@ -13,6 +13,7 @@ const works = [
     year: "2024",
     featured: true,
     image: "/brand/group-3.jpg",
+    link:"https://foodpolicy.ke/about"
   },
   {
     id: "02",
@@ -34,6 +35,7 @@ const works = [
     year: "2023",
     featured: false,
     image: "/brand/film-slate.png",
+    link:"https://foodpolicy.ke/about"
   },
   {
     id: "04",
@@ -44,6 +46,7 @@ const works = [
     year: "2023",
     featured: true,
     image: "/works/2.jpg",
+    link:"https://foodpolicy.ke/about"
   },
 ];
 
@@ -128,12 +131,12 @@ function WorkCard({
           {work.description}
         </p>
 
-        <div
+        <a href={work.link} target="blank"
           className="mt-2 flex items-center gap-2 text-sm font-mono text-foreground/50 group-hover:text-foreground transition-colors duration-300"
         >
-          View case study
+          Learn More
           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-        </div>
+        </a>
       </div>
     </div>
   );
