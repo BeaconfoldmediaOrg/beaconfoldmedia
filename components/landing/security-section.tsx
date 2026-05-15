@@ -7,7 +7,7 @@ const works = [
   {
     id: "01",
     category: "Digital Campaign",
-    title: "Pan-African Youth Advocacy Campaign",
+    title: "Express your beauty",
     description: "A multi-platform mobilization campaign that engaged 2.4M+ young Africans on civic rights and democratic participation across 12 countries.",
     client: "Regional CSO Network",
     year: "2024",
@@ -17,17 +17,18 @@ const works = [
   {
     id: "02",
     category: "Policy Communications",
-    title: "East Africa Health Policy Brief",
-    description: "Evidence-led policy briefs that influenced health financing decisions at the ministerial level in three East African nations.",
-    client: "Health Foundation",
-    year: "2024",
+    title: "Food policy Campaign",
+    description: "The Food Policy Coalition Kenya works to advance stronger food environment policies and address the growing burden of non-communicable diseases (NCDs) in Kenya.",
+    client: "Food Policy Coalition",
+    year: "2026",
     featured: false,
-    image: "/works/1.jpg",
+    image: "/works/food-policy.jpg",
+    link:"https://foodpolicy.ke/about"
   },
   {
     id: "03",
     category: "Audiovisual Production",
-    title: "Powered Voice: Democracy Series",
+    title: "Road safety campaign",
     description: "An 8-part podcast series documenting civic space challenges and victories, reaching 50,000+ listeners across the continent.",
     client: "Pan-African Alliance",
     year: "2023",
