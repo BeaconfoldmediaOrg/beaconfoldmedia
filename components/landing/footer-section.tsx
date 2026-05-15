@@ -26,7 +26,7 @@ const socialLinks = [
   { name: "LinkedIn", href: "https://www.linkedin.com/company/surety-pr-media-ltd" },
   { name: "X", href: "https://x.com/PrSurety" },
   { name: "Instagram", href: "https://www.instagram.com/suretyprmedia/" },
-  { name: "YouTube", href: "https://x.com/PrSurety" },
+  { name: "YouTube", href: "https://www.youtube.com/@SuretyPRMedia" },
   { name: "Facebook", href: "https://www.facebook.com/Suretyprmedia" },
 ];
 
