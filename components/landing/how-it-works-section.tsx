@@ -139,9 +139,9 @@ export function HowItWorksSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Advocacy-led.
+           Strategy-led. 
             <br />
-            <span className="text-muted-foreground">Strategically delivered.</span>
+            <span className="text-muted-foreground">Purposefully delivered.</span>
           </h2>
         </div>
 
