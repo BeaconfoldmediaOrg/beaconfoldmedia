@@ -61,10 +61,10 @@ export function TestimonialsSection() {
   const activeTestimonial = testimonials[activeIndex];
 
   return (
-    <section className="relative py-32 lg:py-40 border-t border-foreground/10 lg:pb-14">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section className="relative py-16 border-foreground/10 lg:pb-14">
+      {/* <div className="max-w-7xl mx-auto px-6 lg:px-12"> */}
         {/* Section Label */}
-        <div className="flex items-center gap-4 mb-16">
+        {/* <div className="flex items-center gap-4 mb-16">
           <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
             What clients say
           </span>
@@ -72,11 +72,11 @@ export function TestimonialsSection() {
           <span className="font-mono text-xs text-muted-foreground">
             {String(activeIndex + 1).padStart(2, "0")} / {String(testimonials.length).padStart(2, "0")}
           </span>
-        </div>
+        </div> */}
 
         {/* Main Quote */}
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
-          <div className="lg:col-span-8">
+        {/* <div className="grid lg:grid-cols-12 gap-12 lg:gap-20"> */}
+          {/* <div className="lg:col-span-8">
             <blockquote
               className={`transition-all duration-300 ${
                 isAnimating ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
@@ -86,8 +86,6 @@ export function TestimonialsSection() {
                 &ldquo;{activeTestimonial.quote}&rdquo;
               </p>
             </blockquote>
-
-            {/* Author */}
             <div
               className={`mt-12 flex items-center gap-6 transition-all duration-300 delay-100 ${
                 isAnimating ? "opacity-0" : "opacity-100"
@@ -105,12 +103,12 @@ export function TestimonialsSection() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Right: person image background + Key Result foreground */}
-          <div className="lg:col-span-4 flex flex-col justify-center gap-6">
-            <div className="relative overflow-hidden aspect-[3/4]">
-              {/* Person image as background */}
+          {/* <div className="lg:col-span-4 flex flex-col justify-center gap-6"> */}
+            {/* <div className="relative overflow-hidden aspect-[3/4]">
+    
               <Image
                 src="/works/digital.jpg"
                 alt={activeTestimonial.author}
@@ -120,7 +118,6 @@ export function TestimonialsSection() {
                   isAnimating ? "opacity-0 scale-105" : "opacity-100 scale-100"
                 }`}
               />
-              {/* Dark gradient so the card reads clearly */}
               <div
                 className="absolute inset-0"
                 style={{
@@ -128,8 +125,6 @@ export function TestimonialsSection() {
                   opacity: 0.75,
                 }}
               />
-
-              {/* Key Result card — pinned to the bottom of the image */}
               <div
                 className={`absolute bottom-0 left-0 right-0 p-6 transition-all duration-300 ${
                   isAnimating ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"
@@ -141,13 +136,13 @@ export function TestimonialsSection() {
                 <p className="font-display text-2xl md:text-3xl text-background leading-tight">
                   {activeTestimonial.metric}
                 </p>
-                {/* Gold underline accent */}
+           
                 <div className="mt-3 w-8 h-0.5" style={{ backgroundColor: "var(--gold)" }} />
               </div>
-            </div>
+            </div> */}
 
             {/* Navigation Dots */}
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               {testimonials.map((_, idx) => (
                 <button
                   key={idx}
@@ -166,16 +161,16 @@ export function TestimonialsSection() {
                   }}
                 />
               ))}
-            </div>
-          </div>
-        </div>
+            </div> */}
+          {/* </div> */}
+        {/* </div> */}
 
         {/* Partners marquee */}
-        <div className="mt-24 pt-12 border-t border-foreground/10" id="partners">
+        <div className="border-foreground/10" id="partners">
           <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase mb-8 text-center">
             Trusted by organizations across the Globe
           </p>
-        </div>
+        {/* </div> */}
       </div>
 
       {/* Full-width marquee */}
