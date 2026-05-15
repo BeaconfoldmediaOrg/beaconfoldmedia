@@ -43,7 +43,7 @@ const works = [
   },
   {
     id: "04",
-    category: "Digital Strategy",
+    category: "Audio visula Production",
     title: "Tobacco slave documentary",
     description: "Tobacco Slave,” a new film by award-winning director Roy Maconachie, the Tobacco Control Research Group at the University of Bath and tobacco industry watchdog STOP, exposes tobacco giant Imperial Brands and other companies through first-hand accounts from farmers in Malawi",
     client: "University of Bath",
