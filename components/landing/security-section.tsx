@@ -32,7 +32,7 @@ const works = [
     client: "Pan-African Alliance",
     year: "2023",
     featured: false,
-    image: "/works/3.jpg",
+    image: "/brand/film-slate.png",
   },
   {
     id: "04",

@@ -19,7 +19,7 @@ export const servicesData: Service[] = [
     tagline: "Say the right thing, to the right people, at the right time.",
     description:
       "Evidence-based communications strategy that guides your voice from insight to impact. We help organisations navigate complex stakeholder landscapes, craft messages that resonate, and build the communications infrastructure needed for lasting influence.",
-    image: "/works/1.jpg",
+    image: "/works/strategic-comms.jpeg",
     offerings: [
       {
         title: "Communications Strategy & Planning",
