@@ -171,7 +171,7 @@ export function TestimonialsSection() {
         </div>
 
         {/* Partners marquee */}
-        <div className="mt-24 pt-12 border-t border-foreground/10">
+        <div className="mt-24 pt-12 border-t border-foreground/10" id="partners">
           <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase mb-8 text-center">
             Trusted by organizations across the Globe
           </p>

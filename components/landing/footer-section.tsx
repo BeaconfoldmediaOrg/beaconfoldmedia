@@ -1,35 +1,25 @@
 "use client";
 
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { AnimatedWave } from "./animated-wave";
 
 const footerLinks = {
   Services: [
-    { name: "Strategic Communications", href: "#features" },
-    { name: "Advocacy & Policy", href: "#features" },
-    { name: "Digital Campaigns", href: "#features" },
-    { name: "Powered Voice", href: "#developers" },
-    { name: "Events", href: "#features" },
-    { name: "M&E", href: "#features" },
-  ],
-  Work: [
-    { name: "Campaigns", href: "#" },
-    { name: "Case Studies", href: "#" },
-    { name: "Impact Reports", href: "#" },
-    { name: "Powered Voice Episodes", href: "#developers" },
+    { name: "Strategic Communications & Counsel", href: "/services/strategic-communications" },
+    { name: "Digital Strategy & Campaigns", href: "/services/digital-strategy" },
+    { name: "Audiovisual Production", href: "/services/audiovisual-production" },
+    { name: "Event Communication", href: "/services/event-communication" },
+    { name: "Policy Advocacy & Communications", href: "/services/advocacy-policy" },
+    { name: "Research & Impact Storytelling", href: "/services/research-impact-storytelling" },
   ],
   Company: [
-    { name: "About", href: "#" },
-    { name: "Team", href: "#" },
-    { name: "Partners", href: "#integrations" },
-    { name: "Careers", href: "#", badge: "Hiring" },
-    { name: "Contact", href: "#" },
-  ],
-  Legal: [
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
-    { name: "Ethics Policy", href: "#" },
-  ],
+    { name: "About", href: "/#about" },
+    // { name: "Team", href: "#" },
+    { name: "Partners", href: "/#partners" },
+    { name: "Careers", href: "/contact", badge: "Hiring" },
+    { name: "Contact", href: "/contact" },
+  ]
 };
 
 const socialLinks = [
@@ -51,7 +41,7 @@ export function FooterSection() {
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Main Footer */}
         <div className="py-16 lg:py-24">
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-12 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-8">
             {/* Brand Column */}
             <div className="col-span-2">
               <a href="#" className="inline-flex items-center gap-1 mb-6">
@@ -89,7 +79,7 @@ export function FooterSection() {
                 <ul className="space-y-4">
                   {links.map((link) => (
                     <li key={link.name}>
-                      <a
+                      <Link
                         href={link.href}
                         className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2"
                       >
@@ -102,7 +92,7 @@ export function FooterSection() {
                             {link.badge}
                           </span>
                         )}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -114,7 +104,7 @@ export function FooterSection() {
         {/* Bottom Bar */}
         <div className="py-8 border-t border-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 BeaconFold Media. All rights reserved.
+            © {new Date().getFullYear()} BeaconFold Media. All rights reserved.
           </p>
 
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
