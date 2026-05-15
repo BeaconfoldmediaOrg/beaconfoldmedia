@@ -53,7 +53,7 @@ export function InfrastructureSection() {
              
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              BeaconFold Media is a Pan-African communications and advocacy agency
+              BeaconFold Media is a A Pan-African public relations and strategic communications agency
               dedicated to shaping impactful narratives for development, policy, and
               social change.
             </p>
