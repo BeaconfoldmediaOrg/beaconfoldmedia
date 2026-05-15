@@ -9,11 +9,13 @@ const works = [
     category: "Digital Campaign",
     title: "Express your beauty",
     description: "A multi-platform mobilization campaign that engaged 2.4M+ young Africans on civic rights and democratic participation across 12 countries.",
-    client: "Regional CSO Network",
+    client: "Circleg",
     year: "2024",
     featured: true,
     image: "/brand/group-3.jpg",
-    link:"https://foodpolicy.ke/about"
+    videoId: "xZ2mBdqXKIU",
+    videoUrl: "https://youtu.be/xZ2mBdqXKIU?list=PLaUUxusj0eU5aVB-lze7Y23F-Tq6FgNp0",
+    link:"https://circleg.world/home.html"
   },
   {
     id: "02",
@@ -30,23 +32,26 @@ const works = [
     id: "03",
     category: "Audiovisual Production",
     title: "Road safety campaign",
-    description: "An 8-part podcast series documenting civic space challenges and victories, reaching 50,000+ listeners across the continent.",
-    client: "Pan-African Alliance",
+    description: "This Kenyan campaign, aiming to curb speeding, was launched by the Mombasa County Government in collaboration with the National Transport and Safety Authority and the National Police Service. ",
+    client: "Vital Strategies",
     year: "2023",
     featured: false,
     image: "/brand/film-slate.png",
-    link:"https://foodpolicy.ke/about"
+    videoId: "6b3vnAqAn4Q",
+    videoUrl: "https://youtu.be/6b3vnAqAn4Q?si=pFWSS6I2wJs3dhvm",
+    link:"https://www.vitalstrategies.org/resources/kenya-road-safety-slow-down-speeding-ruins-lives-marys-story/"
   },
   {
     id: "04",
     category: "Digital Strategy",
-    title: "West Africa CSO Digital Transformation",
-    description: "End-to-end digital strategy and capacity building for a coalition of 24 civil society organizations, tripling their online reach.",
-    client: "CSO Coalition",
+    title: "Tobacco slave documentary",
+    description: "Tobacco Slave,” a new film by award-winning director Roy Maconachie, the Tobacco Control Research Group at the University of Bath and tobacco industry watchdog STOP, exposes tobacco giant Imperial Brands and other companies through first-hand accounts from farmers in Malawi",
+    client: "University of Bath",
     year: "2023",
     featured: true,
-    image: "/works/2.jpg",
-    link:"https://foodpolicy.ke/about"
+     videoId: "BuqA2xAusso",
+    videoUrl: "https://youtu.be/BuqA2xAusso",
+    link:"https://www.youtube.com/watch?v=BuqA2xAusso"
   },
 ];
 
@@ -84,19 +89,30 @@ function WorkCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Image */}
+      {/* Media */}
       <div className="relative overflow-hidden bg-foreground/5 h-64 lg:h-72">
-        <img
-          src={work.image}
-          alt={work.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+        {"videoId" in work && work.videoId ? (
+          <iframe
+            src={`https://www.youtube.com/embed/${work.videoId}`}
+            title={work.title}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="absolute inset-0 h-full w-full"
+          />
+        ) : (
+          <img
+            src={work.image}
+            alt={work.title}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        )}
         {/* Overlay */}
         <div
-          className="absolute inset-0 transition-opacity duration-500"
+          className="pointer-events-none absolute inset-0 transition-opacity duration-500"
           style={{
             background: "linear-gradient(to top, var(--foreground) 0%, transparent 60%)",
-            opacity: isHovered ? 0.6 : 0.3,
+            opacity: "videoId" in work && work.videoId ? 0 : isHovered ? 0.6 : 0.3,
           }}
         />
         {/* Category tag */}
