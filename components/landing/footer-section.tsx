@@ -41,9 +41,9 @@ export function FooterSection() {
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Main Footer */}
         <div className="pt-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-12 ">
             {/* Brand Column */}
-            <div className="col-span-2">
+            <div className="">
               <a href="/" className="inline-flex items-center gap-1">
                 <img
               src="/logo-2.png"

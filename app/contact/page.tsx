@@ -116,7 +116,7 @@ export default function ContactPage() {
             {/* Image */}
             <div className="w-full h-72 lg:h-96 overflow-hidden mb-10">
               <img
-                src="/brand/clip.jpg"
+                src="/contact.png"
                 alt="BeaconFold Media team"
                 className="w-full h-full object-cover"
               />
