@@ -54,6 +54,12 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
+  const keepServicesSectionAsBackTarget = () => {
+    if (window.location.pathname === "/" && window.location.hash !== "#how-it-works") {
+      window.history.replaceState(window.history.state, "", "/#how-it-works");
+    }
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -75,6 +81,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
     >
       <Link
         href={`/services/${service.slug}`}
+        onNavigate={keepServicesSectionAsBackTarget}
         className="group border border-foreground p-8 lg:p-10 flex flex-col gap-6 h-full hover:bg-foreground/[0.02] transition-colors duration-500"
       >
         {/* Number */}

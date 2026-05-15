@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const testimonials = [
@@ -31,6 +32,15 @@ const testimonials = [
     company: "Sahel Advocacy Alliance",
     metric: "50,000+ episode listens",
   },
+];
+
+const partners = [
+  { src: "/partners/1.png", alt: "Partner logo 1", width: 2233, height: 329 },
+  { src: "/partners/2.png", alt: "Partner logo 2", width: 405, height: 124 },
+  { src: "/partners/3.png", alt: "Partner logo 3", width: 1061, height: 235 },
+  { src: "/partners/4.png", alt: "Partner logo 4", width: 1795, height: 470 },
+  { src: "/partners/5.png", alt: "Partner logo 5", width: 351, height: 144 },
+  { src: "/partners/6.jpg", alt: "Partner logo 6", width: 1200, height: 630 },
 ];
 
 export function TestimonialsSection() {
@@ -101,10 +111,12 @@ export function TestimonialsSection() {
           <div className="lg:col-span-4 flex flex-col justify-center gap-6">
             <div className="relative overflow-hidden aspect-[3/4]">
               {/* Person image as background */}
-              <img
+              <Image
                 src="/works/digital.jpg"
                 alt={activeTestimonial.author}
-                className={`w-full h-full object-cover object-top transition-all duration-500 ${
+                fill
+                sizes="(min-width: 1024px) 33vw, 100vw"
+                className={`object-cover object-top transition-all duration-500 ${
                   isAnimating ? "opacity-0 scale-105" : "opacity-100 scale-100"
                 }`}
               />
@@ -161,7 +173,7 @@ export function TestimonialsSection() {
         {/* Partners marquee */}
         <div className="mt-24 pt-12 border-t border-foreground/10">
           <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase mb-8 text-center">
-            Trusted by organizations across Africa
+            Trusted by organizations across the Globe
           </p>
         </div>
       </div>
@@ -171,22 +183,19 @@ export function TestimonialsSection() {
         <div className="flex gap-16 items-center marquee">
           {[...Array(2)].map((_, setIdx) => (
             <div key={setIdx} className="flex gap-16 items-center shrink-0">
-              {[
-                "Africa Policy Forum",
-                "Nairobi Civic Lab",
-                "Sahel Advocacy Network",
-                "Pan-African Women's Council",
-                "East Africa Dev. Forum",
-                "West Africa Policy Institute",
-                "Horn of Africa Alliance",
-                "Southern Africa CSO Hub",
-              ].map((org) => (
-                <span
-                  key={`${setIdx}-${org}`}
-                  className="font-display text-xl md:text-2xl text-foreground/30 whitespace-nowrap hover:text-foreground transition-colors duration-300"
+              {partners.map((partner) => (
+                <div
+                  key={`${setIdx}-${partner.src}`}
+                  className="relative h-14 w-40 md:h-16 md:w-52 shrink-0 opacity-45 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
                 >
-                  {org}
-                </span>
+                  <Image
+                    src={partner.src}
+                    alt={partner.alt}
+                    width={partner.width}
+                    height={partner.height}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
               ))}
             </div>
           ))}
