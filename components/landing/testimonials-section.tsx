@@ -182,7 +182,7 @@ export function TestimonialsSection() {
               {partners.map((partner) => (
                 <div
                   key={`${setIdx}-${partner.src}`}
-                  className="relative h-14 w-40 md:h-16 md:w-52 shrink-0 opacity-45 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+                  className="relative h-14 w-40 md:h-16 md:w-52 shrink-0 opacity-45  transition-all duration-300 hover:opacity-100 hover:grayscale-0"
                 >
                   <Image
                     src={partner.src}
