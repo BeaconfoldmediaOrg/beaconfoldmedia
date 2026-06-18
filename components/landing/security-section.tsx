@@ -26,6 +26,8 @@ const works = [
     year: "2026",
     featured: false,
     image: "/works/food-policy.jpg",
+    videoId: "6tPFk4TCA6I",
+    videoUrl: "https://youtu.be/6tPFk4TCA6I?si=rJTYjpMgf6_g4PeI",
     link:"https://foodpolicy.ke/about"
   },
   {
